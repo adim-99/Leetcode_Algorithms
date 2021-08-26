@@ -5,11 +5,17 @@ class Solution:
         zipped = list(zip(*strs))
         
         for i in zipped: 
-            if len(set(i)) == 1:
+            pre = set(i)
+            if len(pre) == 1:
                 l.append(i[0])
             else:
                 break
                 
         return "".join(l)
         
-        
+ 
+Explanation:
+If zipped = list(zip(*s)), then printing zipped would result in [('f', 'f', 'f'), ('l', 'l', 'l'), ('o', 'o', 'i'), ('w', 'w', 'g')]
+Hence i would be ('f', 'f', 'f'), as the one term. 
+Placing this in a set would eliminate the other duplicates, and where there is only one entry left indicates this was a common letter throughout.
+Appending this to the empty list would allow us to see the prefix.
