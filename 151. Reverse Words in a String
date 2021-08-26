@@ -1,0 +1,25 @@
+class Solution:
+    def reverseWords(self, s):
+        stripped_string = s.strip('"')
+        concatenated_string = stripped_string.split()
+#        reversed_list = concatenated_string[::-1]
+        actual_string = ''
+        
+        for i in concatenated_string:
+            actual_string = i + " "  + actual_string
+        
+        final = actual_string.strip()
+
+
+        return final
+        
+        
+ ----------------------------------------------------------------------------------
+ 
+ There are 2 different ways in which I approached this problem:
+ - one was using a slice operator like so: [::-1]
+ - another way was using a for loop in the manner used in the solution
+ 
+actual_string = " ".join(reversed_list)
+final = actual_string.rstrip()      # right side strip since there will an extra space at the end and the questions wants it all trimmed
+ 
