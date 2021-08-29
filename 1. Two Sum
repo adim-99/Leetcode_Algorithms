@@ -1,0 +1,13 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            for j in range(len(nums)):
+                if nums[i] + nums[j] == target and i!=j:
+                    return [i,j]
+                    
+                    
+ ------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ ** Key thing to note is that the question is asking for the indices of the numbers in the actuall list, not the actual numbers that add up to the target
+ ** To do this, simply using range and len combined would solve the problem
